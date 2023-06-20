@@ -1,3 +1,5 @@
+Основные задачи:
+
 1) Посмотреть где я - pwd
 2) Создать папку - mkdir animals
 3) Зайти в папку - cd animals
@@ -19,6 +21,25 @@
 19) Просмотреть содержимое длинного файла - less ./mamba.txt
 20) Вывести дату и время - date
 
-Задание *
-1) Отправить http запрос на сервер http://162.55.220.72:5006/terminal-hw-request - curl http://162.55.220.72:5006/terminal-hw-request
+--------------------------------------------------------------
 
+Задачи со *:
+
+1) Отправить http запрос на сервер http://162.55.220.72:5006/terminal-hw-request - curl http://162.55.220.72:5006/terminal-hw-request
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:
+
+- Первым делом запускаем git bash и пишем: nano myscript.sh - создается файл скрипта, после чего мы прописываем нужные команды:
+
+#!/bin/bash
+
+cd animals
+mkdir dogs cats snakes
+cd snakes
+touch cobra.txt mamba.txt boomslang.txt location.json behavior.json
+mkdir USA Brazil Mexico
+ls -la
+mv behavior.json location.json ../dogs/
+
+- Дальше сохраняем скрипт и выходим из него.
+- Далее пишем в Git Bash: chmod a+x myscript.sh - это позволит запускать скрипт всем пользователям на ПК.
+- И наконец запускаем сам скрипт: ./myscript.sh
